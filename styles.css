@@ -1,0 +1,106 @@
+body{
+    background: #023020;
+    transition: background-color 1s ease;
+
+}
+img{
+    cursor: pointer;
+}
+header{
+    margin: auto;
+    text-align: center;
+    color: antiquewhite;
+    font-family: Verdana, sans-serif;
+    width: 50vw;
+    max-width: max-content;
+    min-width: min-content;
+    margin-bottom: 5vh;
+    background: #15202b;
+    padding: 1vh 5vw;
+    border-radius: 10vw;
+}
+.title{
+    transition: color 1s ease;
+}
+.image-container{
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    top: 1vh;
+    right: 5vw;
+}
+.image-container img:first-of-type{
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    left: -50px;
+    width: 200px;
+    height: 200px;
+    background: transparent;
+    object-fit: cover;
+    object-position: 10px 10px;
+    transform: scale(2) translateX(-20px) ;
+    filter: drop-shadow(2px 2px 5px rgb(6, 0, 0)) contrast(110%) brightness(80%);
+    border-radius: 5px 100px 80px 120px;
+    transition: opacity 1s ease;
+}
+.image-container img:last-of-type{
+    position: absolute;
+    top: 0;
+    left: 0px;
+    width: 250px;
+    height: 250px;
+    opacity: 0;
+    background: transparent;
+    object-fit: cover;
+    object-position: -10px 20px;
+    transform: scale(1.2) translateX(-20px) ;
+    filter: drop-shadow(2px 2px 5px rgb(6, 0, 0)) contrast(100%) brightness(100%);
+    border-radius: 50%;
+    transition: opacity 1.5s ease;
+}
+
+.image-container img:first-of-type:hover{
+    opacity:0;
+}
+.image-container img:first-of-type:hover + img:last-of-type{
+    opacity:1;
+}
+.image-container img:first-of-type:hover + body{
+    background-color:violet;
+}
+
+.poster-wrap{
+    font-family:Tahoma, sans-serif;
+    position: relative;
+    left: 10vw;
+    top: 5px;
+    padding:20px;
+    width: 20vw;
+    min-width: 180px;
+    max-width: 230px;
+    height: 30vh;
+    min-height: 200px;
+    max-height: 230px;
+    display: flex;
+    flex-direction: column;
+    border: none;
+    border-radius: 80% 50%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: #102734;
+    box-shadow: 2px 2px 4px 40534C;
+    box-sizing: border-box;
+}
+.poster-wrap h1{
+    font-size: 1.5rem;
+    font-weight: 100;
+    color: rgb(194, 212, 136);
+    cursor: grab;
+    width: min-content;
+    line-height: 30px;
+}
+.author-profession{
+    font-weight: 600;
+}
