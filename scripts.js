@@ -3,12 +3,21 @@ function changeBodyBackground() {
     ".image-container img:first-of-type"
   );
   const title = document.querySelector(".title");
+  const navBar = document.querySelector(".nav-bar");
 
   firstImage.addEventListener("mouseover", () => {
-    document.body.style.backgroundColor = "#343434";
+
   });
   firstImage.addEventListener("mouseout", () => {
-    document.body.style.backgroundColor = "";
+
   });
 }
 changeBodyBackground();
+/*
+const coordinatesDiv = document.querySelector('.title');
+document.addEventListener('mousemove', (event) => {
+  const x = event.clientX;
+  const y = event.clientY;
+  coordinatesDiv.textContent = `Mouse X: ${x}, Mouse Y: ${y}`;
+});
+*/
